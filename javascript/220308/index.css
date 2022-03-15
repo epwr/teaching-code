@@ -1,0 +1,29 @@
+html, body {
+    margin: 0;
+    
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+.menu-button {
+    text-align: center;
+    flex-grow: 2;
+    padding: 5px;
+    background-color: #dddddd;
+}
+
+.menu-button:hover {
+    background-color: #bbbbbb;
+    cursor: pointer;
+}
+
+#recipe-holder {
+    margin: 30px;
+    padding: 30px;
+    background-color: #ddd;
+}

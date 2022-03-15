@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // ---------------------------------------------------------
+      const recipes = [
+        { 
+          name: "Recipe #1",
+          steps: "Step 1: Make Bread."
+        },
+        {
+          name: "Recipe #2",
+          steps: "Step 1: Cook a Stew."
+        },
+        {
+          name: "Recipe #3",
+          steps: "Step 1: Something else."
+        },
+      ];
+
+      const showRecipe = (recipeIndex) => {
+        var recipe = recipes[recipeIndex];
+
+        var nameNode = document.createElement('h4');
+        nameNode.innerText = recipe.name;
+
+        var stepsNode = document.createElement('div');
+        stepsNode.innerText = recipe.steps;
+
+        var recipeHolder = document.getElementById('recipe-holder');
+        recipeHolder.replaceChildren();
+        recipeHolder.appendChild(nameNode);
+        recipeHolder.appendChild(stepsNode);
+      }
+      // ------------------------------------------------------------
+    </script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="index.css"
+      media="screen" />
+  </head>
+  <body>
+    <div class="center">
+        <div onClick="showRecipe(0)" class="menu-button">Bread</div>
+        <div onClick="showRecipe(1)" class="menu-button">Stew</div>
+        <div onClick="showRecipe(2)" class="menu-button">Something Else</div>
+    </div>
+    <div id="recipe-holder">
+    </div>
+  </body>
+</html>
