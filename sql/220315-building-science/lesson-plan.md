@@ -4,11 +4,11 @@ Teaching SQL (for BigQuery).
    
 ## Lesson Plan
 
-    - *Part 1 - The Basics:* Setting up a table, insert and update statements.
-    - *Part 2 - Select Statements:* Getting the values you want out of a table.
-    - *Part 3 - Joins:* The Hard part (hoping to complete this in this session)
-    - *Part 4 - Case Statements:* For when you want to get fancy.
-    - *Part 5 - The Danger Zone:* Delete records and dropping tables.
+- *Part 1 - The Basics:* Setting up a table, insert and update statements.
+- *Part 2 - Select Statements:* Getting the values you want out of a table.
+- *Part 3 - Joins:* The Hard part (hoping to complete this in this session)
+- *Part 4 - Case Statements:* For when you want to get fancy.
+- *Part 5 - The Danger Zone:* Delete records and dropping tables.
 
 ## PART 1 - 20 mins
 
