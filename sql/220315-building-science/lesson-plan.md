@@ -51,6 +51,8 @@ NULL - the annoying one. It's not 0, "", or anything else. It's the lack of a va
 
 ### CONSTRAINTS, & CREATE TABLE
 
+BigQuery only has the NOT NULL constraint.
+
 ```sql
 CREATE TABLE `audette-development.learning_sql.employees` (
        uid string,
@@ -65,6 +67,8 @@ CREATE TABLE `audette-development.learning_sql.employees` (
 
 ### ALTER TABLE
 
+BigQuery let's you remove or add columns (but not replace them, or change the datatype).
+
 ```sql
 ALTER TABLE `audette-development.learning_sql.employees`
 ADD COLUMN age integer,
@@ -75,6 +79,8 @@ RENAME COLUMN salary TO annual_salary;
 
 ### CONSTRAINTS v2, FUNCTIONS, & INSERTING VALUES
 
+Let's add some data to the table. This will get an error, why?
+
 ```sql
 INSERT INTO `audette-development.learning_sql.employees` ( firstname, lastname, salary, age ) VALUES
        ( 'Bart', 'Simpson', 10000, 10 ),
@@ -83,6 +89,7 @@ INSERT INTO `audette-development.learning_sql.employees` ( firstname, lastname, 
        ( NULL, 'Boudica', 15, NULL );
 ```
 
+This one works:
 
 ```sql
 INSERT INTO `audette-development.learning_sql.employees` ( firstname, lastname, annual_salary, age, type, employment_start_date ) VALUES
@@ -96,6 +103,7 @@ INSERT INTO `audette-development.learning_sql.employees` ( firstname, lastname, 
        ( 'Klemens',      'von Metternich',   200000,  86,   'Nobility',   CURRENT_DATE() );
        
 ```
+
 
 ### BASIC SELECT STATEMENT
 
@@ -378,6 +386,9 @@ FROM
 Case Statements
 
 ### Case Statements
+
+Think about an if statement, but way better. You can use to rename things (eg. Utility ID -> Utility Type),
+or check if there was an error (eg. using the 'ELSE' field, then search if anything got that value).
 
 ```sql
 SELECT
